@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>library-adminpannel</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{% static 'css/user.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+<section>
+    <div class="book-sec container">
+        <div class="stdbk-bg" id="bookarrg">
+            <div class="viewH row">
+                <h1>Library Management System</h1>
+            </div>
+            <div class="bookarrg row" id="bookarrg" >
+                {% for bkd in bkds %}
+                <div class="book-L">
+                    <div class="book-imgF">
+                        <ul>
+                            <li><a id="{{bkd.bookid}}" href="{% url 'bookview' bkd.bookid %}"><img src="{{bkd.bookimg.url}}" alt="book-img"></a></li>
+                        </ul>
+                    </div>
+                    <div class="bookNF">
+                        <p>{{bkd.bookname}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{% static 'js/menuextent.js' %}"></script>
+<script src="{% static 'js/adminF.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

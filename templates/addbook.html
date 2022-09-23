@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>library-adminpannel</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{% static 'css/user.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+  
+
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="book-sec">
+    <form id="myformA" method="post" action="addbook">{% csrf_token %}</form>
+    <a id="plus_id" href="#" onclick="document.getElementById('myformA').submit();">Add Book</a>
+    <form id="myformU" method="post" action="updsrch"></form>
+    <a id="plus_id" href="#" onclick="document.getElementById('myformU').submit();">Update Book</a>
+    <form id="myformD" method="post" action="delsrch"></form>
+    <a id="plus_id" href="#" onclick="document.getElementById('myformD').submit();">Delete Book</a>
+  </div>
+  <div class="stud-sec">
+    <div class="issue-sec">
+      <form id="myformI" method="post" action="issuebook"></form>
+      <a id="plus_id" href="#" onclick="document.getElementById('myformI').submit();">Issue Book</a>
+    </div>
+    <div class="return-sec">
+      <form id="myformR" method="post" action="returnsrch"></form>
+      <a id="plus_id" href="#" onclick="document.getElementById('myformR').submit();">Return Book</a>
+    </div>
+  </div>
+  <button type="button" class="alogout"><a href="logout">Logout</a></button>
+</div>
+
+<div id="main" class="container-fluid">
+  <div class="row pannel_head">
+    <div class="menuB col-md-6">
+      <span id="menuE" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+    </div>
+  </div>
+  <div class="row pannel_main">
+    <div class="pannel-bg" id="pannel-in">
+      <div>
+        <form method="post" class="ABclass was-validated" action="addbookval" enctype="multipart/form-data">
+          {% csrf_token %}
+          <!--div class="form-group py-2">
+            <label for="bookid">Book id:</label>
+            <input type="number" class="form-control form_data" name="bookid" required>
+          </div-->
+          <div class="form-group py-2">
+            <label for="bookname">Book Name:</label>
+            <input type="text" class="form-control form_data" name="bookname" required>
+          </div>
+
+          <div class="custom-file">
+            <p>Book Img:
+            <input type="file" id="imgB"  name="upimg"></p>
+          </div>
+
+
+          <div class="form-group py-2">
+            <label for="Tbooks">Total Books:</label>
+            <input type="number" class="form-control form_data" name="Tbooks" required>
+          </div>
+
+          <!--div class="form-group py-2">
+            <label for="Available">Available Books:</label>
+            <input type="number" class="form-control form_data" name="Available" required>
+          </div>
+
+          <div class="form-group py-2">
+            <label for="issued">Issued Books:</label>
+            <input type="number" class="form-control form_data" name="issued" required>
+          </div-->
+
+          <div class="validate" id="validate">
+            {% for message in messages %}
+            <h2>{{message}}</h2>
+            {% endfor %}
+          </div>
+          
+          <div class="addbookbtn py-2">
+            <button type="submit" class="btn btn-primary" name="addbookbtn">Add Book</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+ </div>
+  
+  
+  
+  
+  
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{% static 'js/menuextent.js' %}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

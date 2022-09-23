@@ -1,0 +1,487 @@
+.{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Snell Roundhand, cursive;
+}
+
+body{
+   min-height: 100vh;
+   background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
+}
+
+/*--------------------------------------------------------------user-Register----------------------------------------------------*/
+
+#register-bg{
+   background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
+   
+}
+
+
+.usignup{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.usignup-bg{
+   min-height: 80vh;
+   width: 35%;
+   background: linear-gradient(
+    to right top,
+    rgba(255,255,255,0.5),
+    rgba(255,255,255,0.3)
+    );
+   border-radius: 2rem;
+   backdrop-filter: blur(2rem);
+   display: flex;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+   justify-content: center;
+   align-content: center;
+   overflow: hidden;
+   z-index: 2;
+}
+
+
+.usignup-bg:before {
+  content: '';
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  right: 1%;
+  bottom: 1%;
+  background: -webkit-linear-gradient(75deg, rgba(0, 0, 255, 1) 0%, rgba(0, 100,0, 1) 38%, rgba(0, 100, 0, 1) 100% );
+  pointer-events: none;
+  animation: animate 10s linear infinite;
+  z-index: 1;
+  
+}
+
+@keyframes animate
+{
+   0%
+   {
+      filter: blur(200px) hue-rotate(0deg);
+   }
+   100%
+   {
+      filter: blur(200px) hue-rotate(360deg);
+   }
+}
+
+
+.usignup-form{
+   display: flex;
+   z-index: 3;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.usignup-btn{
+   display: flex;
+   z-index: 3;
+   justify-content: center;
+   align-items: center;
+}
+
+.usignup-form h1{
+   color: white;
+   font-family: Snell Roundhand, cursive;
+}
+
+#usignup-header{
+   display: flex;
+   justify-content: center;
+   
+}
+
+
+#Rlogin{
+   display: flex;
+   justify-content: center;
+   font-family: Snell Roundhand, cursive;
+}
+#termcond a{
+   color: white;
+}
+
+#Rlogin a{
+   color: white;
+}
+
+.validate h2{
+   font-size: large;
+   color: red;
+   display: flex;
+   justify-content: center;
+
+}
+
+/*----------------------------------------------------------------user-login-------------------------------------------------------------*/
+
+#login-bg{
+   background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
+
+}
+.userlogin{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.ulogin-bg{
+   min-height: 80vh;
+   width: 35%;
+   background: linear-gradient(
+    to right top,
+    rgba(255,255,255,0.5),
+    rgba(255,255,255,0.3)
+    );
+   border-radius: 2rem;
+   backdrop-filter: blur(2rem);
+   display: flex;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+   justify-content: center;
+   align-content: center;
+   overflow: hidden;
+   z-index: 2;
+}
+
+
+.ulogin-bg:before {
+  content: '';
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  right: 1%;
+  bottom: 1%;
+  background: -webkit-linear-gradient(75deg, rgba(0, 0, 255, 1) 0%, rgba(0, 100,0, 1) 38%, rgba(0, 100, 0, 1) 100% );
+  pointer-events: none;
+  animation: animate 10s linear infinite;
+  z-index: 1;
+  
+}
+
+@keyframes animate
+{
+   0%
+   {
+      filter: blur(200px) hue-rotate(0deg);
+   }
+   100%
+   {
+      filter: blur(200px) hue-rotate(360deg);
+   }
+}
+
+
+.login-form{
+   display: flex;
+   z-index: 3;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.loginbtn{
+   display: grid;
+   z-index: 3;
+   justify-content: center;
+   align-items: center;
+}
+
+.login-form h1{
+   color: white;
+}
+
+#login-header{
+   display: flex;
+   justify-content: center;
+   font-family: Snell Roundhand, cursive;
+}
+
+#Lregister{
+   display: flex;
+   justify-content: center;
+}
+
+#Lregister a{
+   color: white;
+   font-family: Snell Roundhand, cursive;
+}
+
+.loginbtn h2{
+   font-size: small;
+   color: red;
+   display: flex;
+   justify-content: center;
+
+}
+
+
+
+
+/*-------------------------------------------------admin-pannel-------------------------------------------------------------*/
+
+.sidenav{
+   height: 100%;
+   width: 0;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: #111;
+   overflow-x: hidden;
+   transition: 0.5s;
+   padding-top: 60px;
+ }
+ 
+ .sidenav a {
+   padding: 8px 8px 8px 32px;
+   text-decoration: none;
+   font-size: 25px;
+   color: #818181;
+   display: block;
+   transition: 0.3s;
+ }
+ 
+ .sidenav a:hover {
+   color: #f1f1f1;
+ }
+ 
+ .sidenav .closebtn {
+   position: absolute;
+   top: 0;
+   right: 25px;
+   font-size: 36px;
+   margin-left: 50px;
+ }
+ 
+ #main {
+   padding: 16px;
+ }
+ 
+ 
+ 
+ .aback{
+    display: contents;
+ }
+ 
+ .alogout{
+    display: contents;
+ }
+
+ .issue-sec{
+   padding-left: 120px;
+}
+
+.return-sec{
+   padding-left: 120px;
+}
+ /*-------------------------------------------------------admin-pannel-main---------------------------------------------------------*/
+ 
+ .pannel_h{
+    display: flex;
+ }
+ 
+ .nameB{
+    display: flex;
+    justify-content: right;
+ }
+ 
+ .nameB span{
+    color: white;
+    font-size: xx-large;
+    font-family: Snell Roundhand, cursive;
+ }
+ 
+
+.issue-sec{
+   padding-left: 120px;
+}
+
+.return-sec{
+   padding-left: 120px;
+}
+ 
+.pannel_main{
+   padding: 85px;
+}
+
+.pannel-bg{
+   width : 1520px ;
+   height : 700px ;
+   background-color : #f1f1f1;
+   border-radius: 140px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.addB-bg{
+   display: flex;
+   justify-content: center;
+   width: 200px;
+   height: 200px;
+   background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
+   align-items: center;
+   
+
+}
+
+.plus-S h1{
+   text-decoration: none;
+   color: white;
+   font-size: 115px;
+}
+
+.plus-S a:hover{
+   text-decoration: none;
+}
+
+.B-text h2{
+   color: white;
+   font-family: Snell Roundhand, cursive;
+}
+
+.plus-S{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.B-text{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+
+
+/*----------------------------------------------------admin add-book sec------------------------------------------------------*/
+
+.ABclass p,label{
+   font-family: Snell Roundhand, cursive;
+}
+
+.addbookbtn{
+   display: flex;
+   justify-content: center;
+}
+
+
+.utbid :disabled{
+   background: #111;
+
+}
+
+
+/*----------------------------------------------Student-View--------------------------------------------*/
+
+.viewH{
+   padding-top: 20px;
+   padding-bottom: 40px;
+}
+
+
+
+
+.book-imgF ul{
+   list-style-type: none;
+}
+
+
+.viewH{
+   display: flex;
+   justify-content: center;
+
+}
+
+.viewH h1{
+   color: #f1f1f1;
+}
+
+.book-imgF{
+   display: flex;
+   justify-content: center;
+}
+
+.book-imgF img{
+   width: 240px;
+   height: 370px;
+   object-fit: cover;
+   
+}
+
+.bookNF{
+   display: flex;
+   justify-content: center;
+   color: white;
+   padding-left: 34px;
+}
+
+.bookNF p{
+   font-size: 20px;
+}
+
+/*--------------------------------------------------book view----------------------------------*/
+
+.bookV-bg{
+   width: 100%;
+   height: 90vh;
+   background: aliceblue;
+   display: flex;
+   justify-content: center;
+   margin-bottom: 10%;
+   border-radius: 2rem;
+
+}
+
+.bkimg{
+   margin-left: 2;
+
+}
+
+
+.bkimg ul{
+   padding: 0;
+   margin-top: 15%;
+   list-style-type: none;
+}
+
+.bkimg li{
+   vertical-align: middle;
+}
+
+.bkimg h2{
+   font-family: Snell Roundhand, cursive;
+}
+
+.desctext{
+   margin-left: -350px;
+}
+
+table, th, td {
+   border-bottom: 1px solid black;
+   padding: 10px;
+ }
+
+
+.pannel-bg h2{
+   font-family: Snell Roundhand, cursive;
+   
+}
+ 
+.pannel-bg ul{
+   list-style-type: none;
+
+}
+

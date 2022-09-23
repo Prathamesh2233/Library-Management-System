@@ -1,0 +1,278 @@
+.{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family:fantasy;
+}
+
+body{
+   min-height: 100vh;
+   background: -webkit-linear-gradient(90deg, rgba(233,237,232) 1%, rgba(220,53,69) 50%,rgba(220,53,69) 50%, rgba(233,237,232) 100%);
+}
+
+/*--------------------------------------------------------------user-Register----------------------------------------------------*/
+
+#register-bg{
+   background: -webkit-linear-gradient(90deg, rgba(233,237,232) 1%, rgba(220,53,69) 50%,rgba(220,53,69) 50%, rgba(233,237,232) 100%);
+   
+}
+
+
+.usignup{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+.usignup-form{
+   display: flex;
+   z-index: 3;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.usignup-btn{
+   display: flex;
+   z-index: 3;
+   justify-content: center;
+   align-items: center;
+}
+
+.usignup-form h1{
+   color: white;
+}
+
+#usignup-header{
+   display: flex;
+   justify-content: center;
+}
+
+#Rlogin{
+   display: flex;
+   justify-content: center;
+}
+#termcond a{
+   color: white;
+}
+
+#Rlogin a{
+   color: white;
+}
+
+.validate h2{
+   font-size: small;
+   color: red;
+   display: flex;
+   justify-content: center;
+
+}
+
+/*----------------------------------------------------------------user-login-------------------------------------------------------------*/
+
+#login-bg{
+   background: -webkit-linear-gradient(90deg, rgba(233,237,232) 1%, rgba(220,53,69) 50%,rgba(220,53,69) 50%, rgba(233,237,232) 100%);
+
+}
+.userlogin{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.ulogin-bg{
+   min-height: 80vh;
+   width: 35%;
+   background: linear-gradient(
+    to right top,
+    rgba(255,255,255,0.5),
+    rgba(255,255,255,0.3)
+    );
+   border-radius: 2rem;
+   backdrop-filter: blur(2rem);
+   display: flex;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+   justify-content: center;
+   align-content: center;
+   overflow: hidden;
+   z-index: 2;
+}
+
+
+.ulogin-bg:before {
+  content: '';
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  right: 1%;
+  bottom: 1%;
+  background: -webkit-linear-gradient(75deg, rgba(0, 0, 255, 1) 0%, rgba(0, 100,0, 1) 38%, rgba(0, 100, 0, 1) 100% );
+  pointer-events: none;
+  animation: animate 10s linear infinite;
+  z-index: 1;
+  
+}
+
+@keyframes animate
+{
+   0%
+   {
+      filter: blur(200px) hue-rotate(0deg);
+   }
+   100%
+   {
+      filter: blur(200px) hue-rotate(360deg);
+   }
+}
+
+
+.login-form{
+   display: flex;
+   z-index: 3;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.loginbtn{
+   display: grid;
+   z-index: 3;
+   justify-content: center;
+   align-items: center;
+}
+
+.login-form h1{
+   color: white;
+}
+
+#login-header{
+   display: flex;
+   justify-content: center;
+}
+
+#Lregister{
+   display: flex;
+   justify-content: center;
+}
+
+#Lregister a{
+   color: white;
+}
+
+.loginbtn h2{
+   font-size: small;
+   color: red;
+   display: flex;
+   justify-content: center;
+
+}
+
+.loginbtn button{
+
+}
+
+
+/*------------------------------------------------------------user-profile--------------------------------------------------*/
+
+.ticket-receipt .receipt-bg{
+   background: white;
+   display: flex;
+   justify-content: center;
+   overflow: hidden;
+}
+
+.receipt-bg .sub-ticket{
+   display: flex;
+}
+
+.ticket-receipt h2{
+   font-size: 25px;
+   color: black;
+   display: flex;
+}
+
+
+.booking-my h2{
+   font-size: 30px;
+}
+
+
+.uback{
+   background: forestgreen;
+}
+
+.uback a{
+   color: white;
+}
+
+.uback a:hover{
+   text-decoration: none;
+   color: white;
+}
+
+.ulogout{
+   background: red;
+}
+
+
+.ulogout a{
+   color: white;
+
+}
+
+.ulogout a:hover{
+   text-decoration: none;
+   color: white;
+}
+
+.username{
+   display: flex;
+   justify-content: end;
+   align-items: center;
+}
+
+.username h2{
+   font-size: 26px;
+   padding: 15px;
+   font-family: cursive;
+}
+
+.user-head .btn-s{
+   display: flex;
+   align-items: center;
+}
+
+
+/*------------------------------------------------------------sucess.php-----------------------------------------------------*/
+
+#Sucess-mss{
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.sucess-btn button{
+   background: forestgreen;
+}
+
+.sucess-btn a{
+   color: white;
+}
+
+.sucess-btn a:hover{
+   text-decoration: none;
+   color: white;
+}
